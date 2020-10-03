@@ -58,6 +58,13 @@ void disp(struct node *ptr)
     
 }
 
+void peek()
+   {  if(last==NULL)
+      printf("Stack is empty");
+      else
+      printf(" %d ",last->num);
+   }  
+
    void peek()
 {   if(last==NULL)
      printf("Stack is empty");
@@ -70,7 +77,7 @@ int main()
     while(1)
     {
     int ch;
-    printf("\n1-> PUSH\n2-> POP\n3->PEEP\n4-> DISPLAY\n5-> Exit\nEnter Choice: ");
+    printf("\n1-> PUSH\n2-> POP\n3->PEEK\n4-> DISPLAY\n5-> Exit\nEnter Choice: ");
     scanf("%d",&ch);
     if(ch==1)
      push();
