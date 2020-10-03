@@ -3,6 +3,7 @@
  void push(int arr[],int n);
  int  pop(int arr[]);
  void disp(int arr[]);
+ void peep(int arr[]);
  int top=-1;
  
  int main()
@@ -14,7 +15,7 @@
      while(n1!=0)
      {    
          
-         printf("\n1->TO PUSH\n2->TO POP\n3->TO DISPLAY\n0->TO EXIT ");
+         printf("\n1->TO PUSH\n2->TO POP\n3->TO PEEP\n4->TO DISPLAY\n0->TO EXIT ");
           scanf("%d",&x);
          switch(x)
          {
@@ -25,6 +26,9 @@
              pop(arr);
              break;
              case 3:
+              peep(arr); 
+             break;
+          case 4:
              disp(arr);
              break;
          }
@@ -69,5 +73,20 @@
      {
       printf(" %d ",arr[i]);
      }
+ }
+
+void peep(int arr[])
+ {   int data2;
+     if(top==-1)
+     {   
+         printf("stack is empty\n");
+     }
+     else
+     {
+         data2=arr[top];
+         printf("the top most element is %d",data2);
+         
+     }
+
  }
  
